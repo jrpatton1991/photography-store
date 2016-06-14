@@ -7,7 +7,6 @@ var bodyParser = require('body-parser');
 var LocalStrategy = require('passport-local'); //do i need to add .Strategy onto end?
 var session = require('express-session');
 
-
 //Mongoose configuration
 var mongoose = require('mongoose');
 mongoose.connect(process.env.DB_CONN_PHOTOGRAPHY_STORE);
