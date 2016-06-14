@@ -9,5 +9,8 @@ app.config(function($stateProvider, $urlRouterProvider) {
       .state('login', {
         url: '/login',
         templateUrl: "/templates/_loginView.html"
+      }).state('signup',{
+        url: '/signup',
+        templateUrl: "/templates/_signupView.html"
       });
 });
