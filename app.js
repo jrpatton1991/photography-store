@@ -4,7 +4,9 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+var LocalStrategy = require('passport-local'); //do i need to add .Strategy onto end?
 var session = require('express-session');
+
 
 //Mongoose configuration
 var mongoose = require('mongoose');
@@ -12,8 +14,12 @@ mongoose.connect(process.env.DB_CONN_PHOTOGRAPHY_STORE);
 
 //Passport configuration
 var passport = require('passport');
-var LocalStrategy = require('passport-local'); //do i need to add .Strategy onto end?
+var User = require('./models/User');
+passport.use(User.createStrategy());
+passport.serializeUser(User.serializeUser());
+passport.deserializeUser(User.deserializeUser());
 
+//Routing
 var routes = require('./routes/index');
 var users = require('./routes/users');
 
