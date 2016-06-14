@@ -11,7 +11,10 @@
     <h1><%= title %></h1>
     <p>Welcome to <%= title %></p>
     {{1 + 1}}
-
+    <nav>
+      <a ui-sref-active="active" ui-sref="login">Login</a>
+      <a ui-sref-active="active" ui-sref="signup">Sign up</a>
+    </nav>
     <div ui-view></div>
   </body>
 </html>
