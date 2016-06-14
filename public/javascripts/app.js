@@ -1,5 +1,5 @@
 //angular configuration
-angular.module('PhotographyStore', [ui.router]);
+var app=angular.module('PhotographyStore', ['ui.router']);
 
 // Configure different application states
 app.config(function($stateProvider, $urlRouterProvider) {
@@ -7,6 +7,7 @@ app.config(function($stateProvider, $urlRouterProvider) {
 
     $stateProvider
       .state('signup', {
-        url: '/',
-        templateURL: /templates/_signupView.html
+        url: '/signup',
+        templateURL: "/templates/_signupView.html"
       });
+});
