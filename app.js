@@ -5,6 +5,11 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
+//Mongoose configuration
+var mongoose = require('mongoose');
+mongoose.connect(process.env.DB_CONN_PHOTOGRAPHY_STORE);
+
+
 var routes = require('./routes/index');
 var users = require('./routes/users');
 
