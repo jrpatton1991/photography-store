@@ -9,6 +9,9 @@ var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
 mongoose.connect(process.env.DB_CONN_PHOTOGRAPHY_STORE);
 
+//Passport configuration
+var passport = require('passport');
+var LocalStrategy = require('passport-local');
 
 var routes = require('./routes/index');
 var users = require('./routes/users');
