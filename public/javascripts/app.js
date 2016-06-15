@@ -12,5 +12,8 @@ app.config(function($stateProvider, $urlRouterProvider) {
       }).state('signup',{
         url: '/signup',
         templateUrl: "/templates/_signupView.html"
+      }).state('photos',{
+        url: '/photos',
+        templateUrl: "/templates/_photosView.html"
       });
 });
