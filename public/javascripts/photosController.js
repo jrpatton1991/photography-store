@@ -3,10 +3,9 @@ angular.module('PhotographyStore').controller('PhotosController', PhotosControll
 function PhotosController(){
 
   var descriptions = [
-    {name: 'Machu Picchu', location: 'Machu Picchu, Cuzco, Peru'},
-    {name: 'Boat on a Tree', location: 'Dunsborough, WA, Australia'}
+    {name: 'Machu Picchu', location: 'Machu Picchu, Cuzco, Peru', image: './images/machu-picchu.png'}
   ];
-  
+
   this.products = descriptions;
 
 };
