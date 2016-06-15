@@ -1,3 +1,10 @@
-<section ng-controller="PhotosController as photo">
+<section ng-controller="PhotosController as photos">
+
+<h1>My photos</h1>
+
+<div class="product row" ng-repeat='product in photos.products'>
+  {{product.name}}
+</div>
+
 
 </section>
