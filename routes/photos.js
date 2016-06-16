@@ -1,6 +1,8 @@
 var express = require('express');
 var router = express.Router();
 var Photo = require('../models/photo');
+var multer = require('multer');
+var upload = multer({ dest: '../public/images/uploads'})
 
 // GET /photos
 
@@ -14,10 +16,9 @@ router.get('/', function(req, res, next) {
     });
 })
 
-
 // POST /photos
-router.post('/', function(req, res, next) {
-  console.log(req.body);
+router.post('/', upload.single('photoFile'), function(req, res, next) {
+  console.log(req.file);
   // Take photoFile and upload to S3
 
   // Take the url from S3, and save to mongo
