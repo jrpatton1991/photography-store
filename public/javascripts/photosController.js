@@ -18,8 +18,5 @@ function PhotosController($http){
     function errorCallback(response){
       console.log(response)
     });
-
-
   return this;
-
 };
