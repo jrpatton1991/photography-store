@@ -12,19 +12,18 @@ router.get('/', function(req, res, next) {
         res.json(photos);
       }
     });
-});
+})
 
 
 // POST /photos
-router.post('/photos', function(req, res, next) {
-  var photo = new Photo(req.body);
-  photo.save(function(err) {
-    if (err) {
-    res.status(500).send();
-    } else {
-    res.json(photos);
-    }
-  });
+router.post('/', function(req, res, next) {
+  console.log(req.body);
+  // Take photoFile and upload to S3
+
+  // Take the url from S3, and save to mongo
+
+  // redirect
+  res.redirect('/new-photo')
 });
 
 

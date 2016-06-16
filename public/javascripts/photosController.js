@@ -19,6 +19,15 @@ function PhotosController($http){
       console.log(response)
     });
 
+    this.addPhoto = function() {
+          var self = this;
+
+    $http({
+      method: 'POST',
+      url: '/photos',
+      data:
+    }).then(function successCallback(response) {
+        
 
   return this;
 

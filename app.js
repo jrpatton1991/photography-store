@@ -13,7 +13,7 @@ mongoose.connect(process.env.DB_CONN_PHOTOGRAPHY_STORE);
 
 //Passport configuration
 var passport = require('passport');
-var User = require('./models/User');
+var User = require('./models/user');
 passport.use(User.createStrategy());
 passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
