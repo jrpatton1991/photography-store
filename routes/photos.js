@@ -1,19 +1,21 @@
 var express = require('express');
 var router = express.Router();
-var Student = require('./models/photo');
+var Photo = require('../models/photo');
 
 // GET /photos
-router.get('/photos', function(req, res, next) {
+
+router.get('/', function(req, res, next) {
   Photo.find({}, function(err, photos) {
-    if (err) {
-      res.status(500).send();
-    } else {
-      res.json(photos);
-    }
-  });
+      if (err) {
+        res.status(500).send();
+      } else {
+        res.json(photos);
+      }
+    });
 });
 
-// POST /students
+
+// POST /photos
 router.post('/photos', function(req, res, next) {
   var photo = new Photo(req.body);
   photo.save(function(err) {
