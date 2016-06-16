@@ -18,17 +18,5 @@ function PhotosController($http){
     function errorCallback(response){
       console.log(response)
     });
-
-    this.addPhoto = function() {
-          var self = this;
-
-    $http({
-      method: 'POST',
-      url: '/photos',
-      data:
-    }).then(function successCallback(response) {
-        
-
   return this;
-
 };

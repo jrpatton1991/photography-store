@@ -40,9 +40,14 @@ router.get('/', function(req, res, next) {
 router.post('/', upload.single('photoFile'), function(req, res, next) {
   console.log(req.file.location);
   // Take the url from S3, and save to mongo
-
-  // redirect
-  res.redirect('/new-photo')
+  var photo = new Photo({largeUrl: req.file.location});
+  photo.save(function(err) {
+    if (err) {
+      res.status(500).send();
+    } else {
+      res.redirect('/')
+    }
+  });
 });
 
 
