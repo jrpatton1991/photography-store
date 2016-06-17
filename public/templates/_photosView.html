@@ -1,22 +1,11 @@
 <section class="container-fluid" ng-controller="PhotosController as photosCtrl">
-
-<h1>Photo Gallery</h1>
-<br>
-
-<div class="product row" ng-repeat='photo in photosCtrl.photos'>
-  <div class="flex">
-    <div class="container-fluid">
-      <img class="thumbnail" ng-src="{{photo.largeUrl}}"/>
+  <h2>Photo Gallery</h2>
+  <br>
+  <div class="product row" ng-repeat='photo in photosCtrl.photos'>
+    <div class="flex">
+      <div class="container-fluid">
+        <img class="thumbnail" ng-src="{{photo.largeUrl}}"/>
+      </div>
     </div>
   </div>
-</div>
-
-
-  <ul class="list-group">
-    <!-- <li>{{photo.largeUrl}}</li> -->
-    <!-- <li>{{product.location}}</li> -->
-  </ul>
-
-
-
 </section>
