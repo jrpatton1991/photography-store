@@ -1,10 +1,40 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto+Condensed);
+
 body {
-  padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
-a {
-  color: #00B7FF;
+nav{
+  background-color: black;
+  font-family: 'Roboto Condensed';
+}
+
+#uploadit{
+  font-family: 'Roboto Condensed';
+  text-align: center;
+  padding: 30px 0px 30px 0px;
+}
+
+#upload{
+  font-family: 'Roboto Condensed';
+}
+
+#gallery{
+  font-family: 'Roboto Condensed';
+}
+
+.upload{
+  margin-left: 10px;
+}
+
+#action{
+  padding-top: 10px;
+  margin-left: 10px;
+  font-family: 'Roboto Condensed';
+}
+
+.file{
+  padding: 20px;
 }
 
 .row{

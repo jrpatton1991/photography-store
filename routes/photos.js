@@ -45,7 +45,7 @@ router.post('/', upload.single('photoFile'), function(req, res, next) {
     if (err) {
       res.status(500).send();
     } else {
-      res.redirect('/')
+      res.redirect('/#/photos')
     }
   });
 });

@@ -3,7 +3,7 @@ var app=angular.module('PhotographyStore', ['ui.router']);
 
 // Configure different application states
 app.config(function($stateProvider, $urlRouterProvider) {
-    $urlRouterProvider.otherwise('/');
+    $urlRouterProvider.otherwise('/photos');
 
     $stateProvider
       .state('login', {
@@ -15,5 +15,8 @@ app.config(function($stateProvider, $urlRouterProvider) {
       }).state('photos',{
         url: '/photos',
         templateUrl: "/templates/_photosView.html"
-      });
+      }).state('new-photo',{
+        url: '/new-photo',
+        templateUrl: "/templates/_newView.html"
+      })
 });
