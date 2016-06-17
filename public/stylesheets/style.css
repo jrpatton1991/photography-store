@@ -7,7 +7,11 @@ a {
   color: #00B7FF;
 }
 
-.image{
+.row{
+  display: inline-block;
+}
+
+.thumbnail{
   width: auto;
-  height: 400px;
+  height: 200px;
 }

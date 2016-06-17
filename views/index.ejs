@@ -13,12 +13,33 @@
     <!-- <h1><%= title %></h1>
     <p>Welcome to <%= title %></p> -->
     <!-- {{1 + 1}} -->
+
     <nav>
-      <a ui-sref-active="active" ui-sref="login">Login</a>
-      <a ui-sref-active="active" ui-sref="signup">Sign up</a>
-      <a ui-sref-active="active" ui-sref="photos">My Photos</a>
+      <div class="container">
+       <ul class="nav nav-pills">
+         <li><a ui-sref-active="active" ui-sref="photos">Photos</a></li>
+         <li><a ui-sref-active="active" ui-sref="newPhoto">Upload a photo</a></li>
+       </ul>
+      </div>
     </nav>
-    <button type="button" class="btn btn-success">Success</button>
+
+<!-- <nav>
+ <div class="container">
+  <ul class="nav nav-pills">
+   <li><a href="/" title="Home" id="about">Home</a></li>
+   <li><a href="/about" title="About Me" id="about">About Me</a></li>
+   <li><a href="/projects" title="Projects" id="projects">Projects</a></li>
+   <li><a href="/contact" title="Contact"  id="contact">Contact</a></li>
+
+  <div class="badges">
+    <span class="clickable-badge"<img src="//badges.instagram.com/static/images/ig-badge-32.png" alt="Instagram"/></span>
+    <span class="clickable-badge"<img src="https://image.freepik.com/free-icon/linkedin-logo_318-50643.png" alt="Instagram"/></span>
+  </div>
+
+  </ul>
+ </div>
+</nav> -->
+
     <div ui-view></div>
   </body>
 </html>
