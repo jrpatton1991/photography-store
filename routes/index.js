@@ -8,6 +8,7 @@ router.get('/', function(req, res, next) {
 
 router.get('/new-photo', function(req, res, next) {
   res.render('newPhoto', { title: "UploadIt!" });
+
 });
 
 module.exports = router;

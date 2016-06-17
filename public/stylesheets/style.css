@@ -37,6 +37,14 @@ nav{
   padding: 20px;
 }
 
+#nav{
+  padding-bottom: 30px;
+
+}
+/*.nav{
+  background-color: black;
+}*/
+
 .row{
   display: inline-block;
 }
